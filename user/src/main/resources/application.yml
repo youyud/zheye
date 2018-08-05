@@ -1,0 +1,33 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: user
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    isencrypt: false
+    url: jdbc:mysql://120.79.47.54:3306/zheye?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&useSSL=false
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+#  redis:
+#    host: 120.79.47.54
+#    port: 6379
+#    database: 1
+#    pool:
+#      max-active: 8
+#      max-wait: -1
+#      max-idle: 500
+#      min-idle: 0
+#    timeout: 0
+#    password:
+
+mybatis:
+  type-aliases-package: com.zheye.pojo
+  mapper-locations: classpath*:mapper/*Mapper.xml
+
+logging:
+  level:
+    org:
+      springframework: info

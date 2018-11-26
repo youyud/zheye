@@ -1,5 +1,7 @@
 package com.zheye.common.pojo;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class User {
@@ -21,6 +23,7 @@ public class User {
 
     private String card;
 
+    @Email
     private String email;
 
     private String lastLoginIp;
@@ -29,6 +32,7 @@ public class User {
 
     private String loginIp;
 
+    @Size(max = 3)
     private String username;
 
     private Integer sex;

@@ -3,12 +3,12 @@ package com.zheye.common.mapper;
 
 import com.zheye.common.pojo.Attention;
 import com.zheye.common.pojo.AttentionExample;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-@Mapper
+@Component
 public interface AttentionMapper {
     long countByExample(AttentionExample example);
 

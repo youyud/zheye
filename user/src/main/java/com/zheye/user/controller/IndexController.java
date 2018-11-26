@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * @author zhongqiuwu
  * @desciption 首页控制器
@@ -38,7 +42,13 @@ public class IndexController extends BaseController {
     }
 
     public static void main(String[] args) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date today = sdf.parse(sdf.format(new Date()));
+            System.out.println(today);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
-        System.out.println(Integer.MAX_VALUE);
     }
 }
